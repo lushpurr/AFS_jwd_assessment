@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import data from '../../../assets/mock_data_(1).json';
 
 @Component({
   selector: 'app-customers',
@@ -10,6 +11,7 @@ export class CustomersComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(data);
   }
 
 }
