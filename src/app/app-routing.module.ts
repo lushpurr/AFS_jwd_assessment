@@ -6,10 +6,22 @@ import { CustomersComponent } from './home/customers/customers.component';
 import { EmployeesComponent } from './home/employees/employees.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'auth', component: AuthComponent },
-  { path: 'home/customer', component: CustomersComponent},
-  { path: 'home/employee', component: EmployeesComponent},
+  { 
+    path: 'home', 
+    component: HomeComponent,
+    children: [
+      {
+        path: 'customers',
+        component: CustomersComponent, 
+      },
+      {
+        path: 'employees',
+        component: EmployeesComponent,
+      }
+    ] 
+  },
+
+    // { path: 'auth', component: AuthComponent },
     // Wildcard 
     { path: '**', component: HomeComponent }, 
     // Redirects when hit the home url
