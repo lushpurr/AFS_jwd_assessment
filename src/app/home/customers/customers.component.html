@@ -1,7 +1,35 @@
 <p>Customer List</p>
 
-<ul class="customers">
+<!-- <ul class="customers">
     <li *ngFor="let customer of customers">
         {{customer.first_name}}
     </li>
-</ul>
+</ul> -->
+
+<!-- [{"id":1,"first_name":"Packston","last_name":"Burtwhistle","email":"pburtwhistle0@angelfire.com","gender":"Male","employed":true}, -->
+
+<nz-table #basicTable [nzData]="customers">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Employed</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td>{{data.first_name}}</td>
+        <td>{{data.last_name}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.gender}}</td>
+        <td>{{data.employed}}</td>
+        <td>
+          <a>Action 一 {{data.name}}</a>
+          <nz-divider nzType="vertical"></nz-divider>
+          <a>Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>

@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AuthComponent } from './auth/auth.component';
-import { CustomersComponent } from './home/customers/customers.component';
-import { EmployeesComponent } from './home/employees/employees.component';
+// import { CustomersComponent } from './home/customers/customers.component';
+// import { EmployeesComponent } from './home/employees/employees.component';
 import { AuthGuard } from './auth/auth.guard';
 import { HomeGuard } from './home/home.guard';
 

@@ -8,6 +8,7 @@ import { AuthComponent } from './auth/auth.component';
 // ant design 
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
+import { NzTableModule } from 'ng-zorro-antd/table';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
     BrowserModule,
     AppRoutingModule,
     NzLayoutModule,
-    NzBreadCrumbModule
+    NzBreadCrumbModule,
+    NzTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,6 +6,7 @@ import { EmployeesComponent } from './employees/employees.component';
 // ant design 
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
+import { NzTableModule } from 'ng-zorro-antd/table';
 
 
 
@@ -22,7 +23,8 @@ import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
     CommonModule, 
     HomeRoutingModule,
     NzLayoutModule,
-    NzBreadCrumbModule
+    NzBreadCrumbModule,
+    NzTableModule
   ]
 })
 export class HomeModule { }
