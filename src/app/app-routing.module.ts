@@ -5,11 +5,13 @@ import { AuthComponent } from './auth/auth.component';
 import { CustomersComponent } from './home/customers/customers.component';
 import { EmployeesComponent } from './home/employees/employees.component';
 import { AuthGuard } from './auth/auth.guard';
+import { HomeGuard } from './home/home.guard';
 
 const routes: Routes = [
   
   { 
     path: 'home', 
+    canLoad: [HomeGuard],
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   },
 
@@ -21,7 +23,6 @@ const routes: Routes = [
     // Wildcard 
   { path: '**', component: HomeComponent },
     // Redirects when hit the home url
-
   { path: '', redirectTo: '/home', pathMatch:'full'},
  
 ];
