@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,9 @@ import { AuthComponent } from './auth/auth.component';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 @NgModule({
   declarations: [
@@ -18,10 +22,14 @@ import { NzTableModule } from 'ng-zorro-antd/table';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     NzLayoutModule,
     NzBreadCrumbModule,
-    NzTableModule
+    NzTableModule,
+    NzPageHeaderModule,
+    NzMenuModule,
+    NzIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
