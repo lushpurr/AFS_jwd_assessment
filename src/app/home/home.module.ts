@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HomeRoutingModule } from './home-routing.module';
 import { CustomersComponent } from './customers/customers.component';
 import { EmployeesComponent } from './employees/employees.component';
-import { HomeRoutingModule } from './home-routing.module';
 
 
 

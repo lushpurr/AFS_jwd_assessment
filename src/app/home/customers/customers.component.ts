@@ -7,11 +7,17 @@ import data from '../../../assets/mock_data_(1).json';
   styleUrls: ['./customers.component.scss']
 })
 export class CustomersComponent implements OnInit {
+  customers = data;
+  
+  
 
   constructor() { }
 
   ngOnInit(): void {
     console.log(data);
+    
+
+    
   }
 
 }
