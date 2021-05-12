@@ -6,7 +6,6 @@
     </li>
 </ul> -->
 
-<!-- [{"id":1,"first_name":"Packston","last_name":"Burtwhistle","email":"pburtwhistle0@angelfire.com","gender":"Male","employed":true}, -->
 
 <nz-table #basicTable [nzData]="customers">
     <thead>
@@ -25,11 +24,7 @@
         <td>{{data.email}}</td>
         <td>{{data.gender}}</td>
         <td>{{data.employed}}</td>
-        <td>
-          <a>Action 一 {{data.name}}</a>
-          <nz-divider nzType="vertical"></nz-divider>
-          <a>Delete</a>
-        </td>
+
       </tr>
     </tbody>
   </nz-table>

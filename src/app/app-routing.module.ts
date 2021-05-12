@@ -6,15 +6,18 @@ import { CustomersComponent } from './home/customers/customers.component';
 import { EmployeesComponent } from './home/employees/employees.component';
 import { AuthGuard } from './auth/auth.guard';
 import { HomeGuard } from './home/home.guard';
+//Bug fix
+import { NO_ERRORS_SCHEMA  } from '@angular/core';
+
 
 const routes: Routes = [
   // { path: 'home', component: HomeComponent }, 
 
-  { 
-    path: 'home', 
-    canLoad: [HomeGuard],
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
-  },
+  // { 
+  //   path: 'home', 
+  //   canLoad: [HomeGuard],
+  //   loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+  // },
    { 
     path: 'home', 
     component: HomeComponent,
@@ -43,6 +46,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
+  schemas: [ NO_ERRORS_SCHEMA ],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })

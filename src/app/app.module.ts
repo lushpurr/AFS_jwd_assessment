@@ -5,27 +5,37 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { CustomersComponent } from './home/customers/customers.component'
 import { AuthComponent } from './auth/auth.component';
+import { HttpClientModule } from '@angular/common/http';
+
 // ant design 
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
-import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 
+//Bug fix
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+
+
 @NgModule({
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+
   declarations: [
     AppComponent,
     HomeComponent,
-    AuthComponent
+    AuthComponent,
+    CustomersComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     NzLayoutModule,
-    NzBreadCrumbModule,
     NzTableModule,
     NzPageHeaderModule,
     NzMenuModule,
