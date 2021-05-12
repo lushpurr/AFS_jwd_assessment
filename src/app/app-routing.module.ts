@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { AuthComponent } from './auth/auth.component';
 import { CustomersComponent } from './home/customers/customers.component';
 import { EmployeesComponent } from './home/employees/employees.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'home/customers', component: CustomersComponent },
-  { path: 'home/employees', component: EmployeesComponent },
-  { path: '**', component: HomeComponent},
-  { path: '', redirectTo: '/dashboard', pathMatch:'full'}
-  
+  { path: 'auth', component: AuthComponent },
+  { path: 'home/customer', component: CustomersComponent},
+  { path: 'home/employee', component: EmployeesComponent},
+    // Wildcard 
+    { path: '**', component: HomeComponent }, 
+    // Redirects when hit the home url
+    { path: '', redirectTo: '/home', pathMatch:'full'},
+
 
 ];
 
