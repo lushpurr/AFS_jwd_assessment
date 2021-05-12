@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CustomersComponent } from './customers/customers.component';
 import { EmployeesComponent } from './employees/employees.component';
-import { AppRoutingModule } from '../app-routing.module';
+import { HomeRoutingModule } from './home-routing.module';
 
 
 
@@ -13,7 +13,7 @@ import { AppRoutingModule } from '../app-routing.module';
   ],
   imports: [
     CommonModule, 
-    AppRoutingModule
+    HomeRoutingModule
   ]
 })
 export class HomeModule { }

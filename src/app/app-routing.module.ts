@@ -7,19 +7,10 @@ import { EmployeesComponent } from './home/employees/employees.component';
 import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
+  
   { 
     path: 'home', 
-    component: HomeComponent,
-    children: [
-      {
-        path: 'customers',
-        component: CustomersComponent, 
-      },
-      {
-        path: 'employees',
-        component: EmployeesComponent,
-      }
-    ] 
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   },
 
   { 
@@ -28,9 +19,11 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
     // Wildcard 
-  { path: '**', component: HomeComponent }, 
+  { path: '**', component: HomeComponent },
     // Redirects when hit the home url
+
   { path: '', redirectTo: '/home', pathMatch:'full'},
+ 
 ];
 
 @NgModule({
