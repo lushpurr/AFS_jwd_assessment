@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 /*graphql imports */
 import * as queries from '../../../graphql/queries';
-import * as mutations from '../../../graphql/mutations';
+import { createTodo, updateTodo, deleteTodo } from '../../../graphql/mutations';
 import * as subscriptions from '../../../graphql/subscriptions';
+
+
 
 import { API, graphqlOperation } from 'aws-amplify';
 
@@ -13,14 +15,23 @@ import { API, graphqlOperation } from 'aws-amplify';
   styleUrls: ['./employees.component.scss']
 })
 export class EmployeesComponent implements OnInit {
+createTodo = () => {
+const todo =  { name: "My first todo", description: "Hello world!" };
+API.graphql(graphqlOperation(createTodo, {input: todo}));
 
-  constructor() { }
+this.getAllTodos();
+}
 
-  async ngOnInit(): Promise<void> {
-    const oneTodo = await API.graphql(graphqlOperation(queries.getTodo, { id: 1 }));
+getAllTodos = async () => {
 // Simple query
 const allTodos = await API.graphql({ query: queries.listTodos });
 console.log(allTodos); // result: { "data": { "listTodos": { "items": [/* ..... */] } } }
+
+}
+
+constructor() { }
+
+async ngOnInit(): Promise<void> {
 
 
   }

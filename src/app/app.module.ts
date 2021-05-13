@@ -16,6 +16,8 @@ import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzImageModule } from 'ng-zorro-antd/image';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+
 
 
 //Bug fix
@@ -52,6 +54,7 @@ Amplify.configure(awsconfig);
     NzMenuModule,
     NzIconModule,
     NzImageModule,
+    NzButtonModule,
     /* configure app with AmplifyUIAngularModule */
     AmplifyUIAngularModule
     

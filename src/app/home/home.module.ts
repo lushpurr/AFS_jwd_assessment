@@ -17,6 +17,8 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { CustomersComponent } from './customers/customers.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { NzImageModule } from 'ng-zorro-antd/image';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+
 
 
 //Bug fix
@@ -42,7 +44,8 @@ import { CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
     NzPageHeaderModule,
     NzMenuModule,
     NzIconModule,
-    NzImageModule
+    NzImageModule,
+    NzButtonModule
   ]
 
 })
