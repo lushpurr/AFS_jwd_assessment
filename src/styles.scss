@@ -1,12 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
-// @import "~ng-zorro-antd/ng-zorro-antd.css";
-/*@import "~ng-zorro-antd/ng-zorro-antd.compact.css";*/
-$primary-color: #fe8019;
 
-.component{
-  $primary-color: #fe8019;
-  
+// custom styling
+
+// Primary colour to #F5a624
+// Info colour & processing colour to @orange-6
+// Layout header background & table header background to #272727
+// Table header colour to #fafafa
+
+
+
+$theme: (
+  "primary": green,
+);
+
+h1{
+  font-style: italic;
 }
+
+th{
+  color: #fafafa;
+}
+
 
 .loo {
     width: 120px;
@@ -39,4 +52,11 @@ $primary-color: #fe8019;
     min-height: 280px;
   }
 
+  nz-layout {
+    background:#272727
+  }
+
   
+/* You can add global styles to this file, and also import other style files */
+@import "~ng-zorro-antd/ng-zorro-antd.css";
+

@@ -21,6 +21,9 @@ import { NzImageModule } from 'ng-zorro-antd/image';
 //Bug fix
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
+/* import AmplifyUIAngularModule  */
+import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
+
 
 
 @NgModule({
@@ -42,7 +45,9 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     NzPageHeaderModule,
     NzMenuModule,
     NzIconModule,
-    NzImageModule
+    NzImageModule,
+    /* configure app with AmplifyUIAngularModule */
+    AmplifyUIAngularModule
   ],
   providers: [],
   bootstrap: [AppComponent]
