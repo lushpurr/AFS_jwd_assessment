@@ -10,7 +10,7 @@
 <nz-table #basicTable [nzData]="customers">
     <thead>
       <tr>
-        <th>First Name</th>
+        <th [nzSortFn]="sortFn" >First Name</th>
         <th>Last Name</th>
         <th>Email</th>
         <th>Gender</th>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import data from '../../../assets/mock_data_(1).json';
 
+
+
 @Component({
   selector: 'app-customers',
   templateUrl: './customers.component.html',
@@ -11,13 +13,14 @@ import data from '../../../assets/mock_data_(1).json';
 export class CustomersComponent implements OnInit {
   customers = data;
   
+
   constructor() { }
 
   ngOnInit(): void {
     console.log(data);
     
-
-    
   }
+
+  sortFn = (a, b) => a.first_name.localeCompare(b.first_name);
 
 }

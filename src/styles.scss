@@ -1,7 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~ng-zorro-antd/ng-zorro-antd.css";
+// @import "~ng-zorro-antd/ng-zorro-antd.css";
+/*@import "~ng-zorro-antd/ng-zorro-antd.compact.css";*/
+$primary-color: #fe8019;
 
-.logo {
+.component{
+  $primary-color: #fe8019;
+  
+}
+
+.loo {
     width: 120px;
     height: 31px;
     background: rgba(255, 255, 255, 0.2);
@@ -31,3 +38,5 @@
     padding: 24px;
     min-height: 280px;
   }
+
+  

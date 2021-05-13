@@ -10,7 +10,7 @@ import { HomeRoutingModule } from './home-routing.module';
 
 // ant design 
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
-import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzTableModule, NzTableSortOrder, NzTableSortFn } from 'ng-zorro-antd/table';
 import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzIconModule } from 'ng-zorro-antd/icon';
