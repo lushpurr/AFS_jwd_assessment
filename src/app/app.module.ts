@@ -15,6 +15,8 @@ import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzImageModule } from 'ng-zorro-antd/image';
+
 
 //Bug fix
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -39,7 +41,8 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     NzTableModule,
     NzPageHeaderModule,
     NzMenuModule,
-    NzIconModule
+    NzIconModule,
+    NzImageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
