@@ -27,15 +27,48 @@ interface ColumnItem {
 })
 export class CustomersComponent implements OnInit {
   listOfData: DataItem[] = data;
-  listOfFilter: [
-    { text: 'Female', value: 'Female' },
-    { text: 'Male', value: 'Male' }
-  ]
 
- 
-
-
-  
+  listOfColumns: ColumnItem[] = [
+    {
+      name: 'First Name',
+      sortOrder: null,
+      sortFn: (a: DataItem, b: DataItem) => a.first_name.localeCompare(b.first_name)
+      ,
+      listOfFilter: [],
+      filterFn: null
+    },
+    {
+      name: 'Second Name',
+      sortOrder: null,
+      sortFn: null,
+      listOfFilter: [],
+      filterFn: null
+    },
+    {
+      name: 'Email',
+      sortFn: null,
+      sortOrder: null,
+      listOfFilter: [],
+      filterFn: null
+    },
+    {
+      name: 'Gender',
+      sortFn: null,
+      sortOrder: null,
+      listOfFilter: [
+        { text: 'Female', value: 'Female' },
+        { text: 'Male', value: 'Male' }
+      ],
+      filterFn: (address: string, item: DataItem) => item.gender.indexOf(address) !== -1
+    },
+    {
+      name: 'Employed',
+      sortFn: null,
+      sortOrder: null,
+      listOfFilter: [],
+      filterFn: null
+    }
+  ];
 
   constructor() { }
 
@@ -43,9 +76,5 @@ export class CustomersComponent implements OnInit {
     console.log(data);
     
   }
-
-  sortFn = (a, b) => a.first_name.localeCompare(b.first_name);
-
-  // filterFn = (a, b) => void;
 
 }
