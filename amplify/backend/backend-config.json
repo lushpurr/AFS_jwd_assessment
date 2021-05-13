@@ -1,1 +1,10 @@
-{}
+{
+  "auth": {
+    "afsjwdassessmente5495734e5495734": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

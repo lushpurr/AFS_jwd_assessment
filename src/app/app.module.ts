@@ -21,8 +21,13 @@ import { NzImageModule } from 'ng-zorro-antd/image';
 //Bug fix
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-/* import AmplifyUIAngularModule  */
+/* Add Amplify imports */
 import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
+import Amplify from 'aws-amplify';
+import awsconfig from '../aws-exports';
+
+/* Configure Amplify resources */
+Amplify.configure(awsconfig);
 
 
 
@@ -48,6 +53,7 @@ import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
     NzImageModule,
     /* configure app with AmplifyUIAngularModule */
     AmplifyUIAngularModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
