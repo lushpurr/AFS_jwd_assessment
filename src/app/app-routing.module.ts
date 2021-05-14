@@ -11,26 +11,12 @@ import { NO_ERRORS_SCHEMA  } from '@angular/core';
 
 
 const routes: Routes = [
-  // { path: 'home', component: HomeComponent }, 
 
-  // { 
-  //   path: 'home', 
-  //   canLoad: [HomeGuard],
-  //   loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
-  // },
    { 
     path: 'home', 
-    component: HomeComponent,
-    children: [
-      {
-        path: 'customers',
-        component: CustomersComponent, 
-      },
-      {
-        path: 'employees',
-        component: EmployeesComponent,
-      }
-    ] 
+    canLoad: [HomeGuard],
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
+ 
   },
 
   { 
@@ -38,10 +24,11 @@ const routes: Routes = [
     component: AuthComponent,
     canActivate: [AuthGuard]
   },
-    // Wildcard 
-  { path: '**', component: HomeComponent },
+ 
     // Redirects when hit the home url
   { path: '', redirectTo: '/home', pathMatch:'full'},
+     // Wildcard 
+  { path: '**', component: HomeComponent },
  
 ];
 

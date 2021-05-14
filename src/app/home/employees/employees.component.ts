@@ -4,13 +4,12 @@ import { NzTableFilterFn, NzTableFilterList, NzTableSortFn, NzTableSortOrder } f
 import * as queries from '../../../graphql/queries';
 import { createTodo, updateTodo, deleteTodo } from '../../../graphql/mutations';
 import { API, graphqlOperation } from 'aws-amplify';
+import { listTodos } from '../../../graphql/queries';
+
 
 interface DataItem {
-  created_at: string;
-  description: string;
-  id: string;
   name: string;
-  updated_at: string;
+  description: string;
 }
 
 interface ColumnItem {
@@ -27,12 +26,16 @@ interface ColumnItem {
     styleUrls: ['./employees.component.scss']
 })
 export class EmployeesComponent implements OnInit {
+  todos: Array<DataItem>;
+
+
 
   listOfColumns: ColumnItem[] = [
+
     {
-      name: 'Created',
-      sortOrder: null,
+      name: 'Name',
       sortFn: null,
+      sortOrder: null,
       listOfFilter: [],
       filterFn: null
     },
@@ -42,48 +45,42 @@ export class EmployeesComponent implements OnInit {
       sortFn: null,
       listOfFilter: [],
       filterFn: null
-    },
-    {
-      name: 'ID',
-      sortFn: null,
-      sortOrder: null,
-      listOfFilter: [],
-      filterFn: null
-    },
-    {
-      name: 'Name',
-      sortFn: null,
-      sortOrder: null,
-      listOfFilter: [],
-      filterFn: null
-    },
-    {
-      name: 'Updated',
-      sortFn: null,
-      sortOrder: null,
-      listOfFilter: [],
-      filterFn: null
     }
+
+ 
   ];
 
-  allTodos = () => {
-    API.graphql({ query: queries.listTodos });
-  };
   
-  createTodo = () => {
-  const todo =  { name: "My first todo", description: "Hello world!" };
-  API.graphql(graphqlOperation(createTodo, {input: todo}));
 
-  
-  }
-
-   
 
 constructor() { }
 
 async ngOnInit(): Promise<void> {
 
-    
+  var response = await API.graphql(graphqlOperation(listTodos))
+  this.todos = (response as any).data.listTodos.items;
+ 
+ 
 }
 
+createTodo = () => {
+  const todo =  { name: "My first todo", description: "Hello world!" };
+  API.graphql(graphqlOperation(createTodo, {input: todo}));
 }
+
+
+// listOfData = this.getData()
+
+
+//   /* create a todo */
+// await API.graphql(graphqlOperation(createTodo, {input: todo}));
+
+// /* update a todo */
+// await API.graphql(graphqlOperation(updateTodo, { input: { id: todoId, name: "Updated todo info" }}));
+
+// /* delete a todo */
+// await API.graphql(graphqlOperation(deleteTodo, { input: { id: todoId }}));
+  
+}
+
+

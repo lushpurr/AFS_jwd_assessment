@@ -5,8 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { CustomersComponent } from './home/customers/customers.component';
-import { EmployeesComponent } from './home/employees/employees.component';
+// import { CustomersComponent } from './home/customers/customers.component';
+// import { EmployeesComponent } from './home/employees/employees.component';
 import { AuthComponent } from './auth/auth.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -42,8 +42,8 @@ Amplify.configure(awsconfig);
     AppComponent,
     HomeComponent,
     AuthComponent,
-    CustomersComponent,
-    EmployeesComponent
+    // CustomersComponent,
+    // EmployeesComponent
   ],
   imports: [
     HttpClientModule,

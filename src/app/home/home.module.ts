@@ -1,12 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
-
-
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HomeRoutingModule } from './home-routing.module';
+// import { AppRoutingModule } from '../app-routing.module';
 
 // ant design 
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
@@ -36,9 +32,10 @@ import { CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
   ],
   imports: [
     CommonModule, 
-    BrowserModule,
+    // AppRoutingModule,
+    // BrowserModule,
     HomeRoutingModule,
-    BrowserAnimationsModule,
+    // BrowserAnimationsModule,
     NzLayoutModule,
     NzTableModule,
     NzPageHeaderModule,

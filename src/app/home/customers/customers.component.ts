@@ -26,7 +26,7 @@ interface ColumnItem {
 
 })
 export class CustomersComponent implements OnInit {
-  listOfData: DataItem[] = data;
+  listData: DataItem[] = data;
 
   listOfColumns: ColumnItem[] = [
     {
